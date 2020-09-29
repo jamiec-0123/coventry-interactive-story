@@ -1,7 +1,8 @@
 def checkInput(input, choices):
     try:
         option =int(input)
-        if(option>0 and option<choices):
+        limmit = int(choices)
+        if(option>0 and option<limmit):
             return option
         else:
             return 0
