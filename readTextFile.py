@@ -1,25 +1,7 @@
 import re
-def lineReader(lineNum):
-    filepath = 'dataDump.txt'
-    output=[]
-    cnt=0
-    with open(filepath, 'r', encoding='utf8') as fp:
-        line = fp.readline()
-        while line:
-            if( cnt>=lineNum):
-                print(" {}".format(line.strip()))
-                test="{}".format(line.strip())
-                option=re.findall(r"\[\[(.*?)\]\]", test)
-                if(option!=[]):
-                    output.append(test)
-                    output += option
-                    output.append(cnt)
-                    return output
-                else:
-                    output.append(test)
-            line = fp.readline()
-            cnt += 1
+
 def choiceSelector(selection):
+    """Allows search for titles of choices"""
     filepath = 'dataDump.txt'
     cnt=0
     firstOption=False
@@ -39,6 +21,45 @@ def choiceSelector(selection):
             line = fp.readline()
             cnt += 1
 
+def lineReader(lineNum):
+    """Gets dialog and choices  from specific line number"""
+    filepath = 'dataDump.txt'
+    output=[]
+    cnt=0
+    with open(filepath, 'r', encoding='utf8') as fp:
+        line = fp.readline()
+        while line:
+            if( cnt>=lineNum):
+                test="{}".format(line.strip())
+                option=re.findall(r"\[\[(.*?)\]\]", test)
+                if(option!=[]):
+                    output.append(test)
+                    output += option
+                    output.append(cnt)
+                    return output
+                else:
+                    output.append(test)
+            line = fp.readline()
+            cnt += 1
 
-print(choiceSelector("Sunny"))
-#output eg. Line 2: The Fly on Doritos
+def choiceSelectorAndNum(selection,lineNum):
+    """Gets dialog and choices from specific line number and choice"""
+    filepath = 'dataDump.txt'
+    output=[]
+    cnt=0
+    with open(filepath, 'r', encoding='utf8') as fp:
+        line = fp.readline()
+        while line:
+            if( cnt>lineNum):
+                test="{}".format(line.strip())
+                option=re.findall(selection, test)
+                if(option != []):
+                    return(lineReader(cnt))
+            line = fp.readline()
+            cnt += 1
+
+
+#Note, choices are case sensitive.
+print(choiceSelectorAndNum("next", 56))
+#output eg. ['Sunny', 'Vincent was sunbathing inside the local park as Jules pumped into him', 'excited about a new idea that he’s determined to share Vincent with. [[next]]', 'next', 52]
+
