@@ -7,8 +7,8 @@ def lineReader(lineNum):
         line = fp.readline()
         while line:
             if( cnt>=lineNum):
-                print("Line {}: {}".format(cnt, line.strip()))
-                test="Line {}: {}".format(cnt, line.strip())
+                print(" {}".format(line.strip()))
+                test="{}".format(line.strip())
                 option=re.findall(r"\[\[(.*?)\]\]", test)
                 if(option!=[]):
                     output.append(test)
@@ -26,14 +26,19 @@ def choiceSelector(selection):
     with open(filepath, 'r', encoding='utf8') as fp:
         line = fp.readline()
         while line:
-            test="Line {}: {}".format(cnt, line.strip())
-            option=[""]
-            if selection in test:
-                print("HERE")
-                return lineReader(cnt)
+            test="{}".format( line.strip())
+            option=re.findall(selection, test)
+            print(option)
+            if(option != []):
+                if(firstOption ):
+                    print(lineReader(cnt))
+                    print("here")
+                    return(lineReader(cnt))
+                else:
+                    firstOption=True
             line = fp.readline()
             cnt += 1
 
 
-print(choiceSelector("he checked their photos and some videos"))
+print(choiceSelector("Sunny"))
 #output eg. Line 2: The Fly on Doritos
