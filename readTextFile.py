@@ -13,8 +13,6 @@ def choiceSelector(selection):
             print(option)
             if(option != []):
                 if(firstOption ):
-                    print(lineReader(cnt))
-                    print("here")
                     return(lineReader(cnt))
                 else:
                     firstOption=True
@@ -45,7 +43,6 @@ def lineReader(lineNum):
 def choiceSelectorAndNum(selection,lineNum):
     """Gets dialog and choices from specific line number and choice"""
     filepath = 'dataDump.txt'
-    output=[]
     cnt=0
     with open(filepath, 'r', encoding='utf8') as fp:
         line = fp.readline()
