@@ -60,38 +60,3 @@ def choiceSelectorAndNum(selection,lineNum):
 #Note, choices are case sensitive.
 print(choiceSelectorAndNum("next", 56))
 #output eg. ['Sunny', 'Vincent was sunbathing inside the local park as Jules pumped into him', 'excited about a new idea that he’s determined to share Vincent with. [[next]]', 'next', 52]
-=======
-def readFile(filepath):
-#opens file and writes every line into a list
-    file = []
-    with open(filepath, 'r', encoding='utf8') as fp:
-       line = fp.readline()
-       cnt = 1
-    while line:
-           file.append(line)
-           line = fp.readline()
-           cnt += 1
-
-#joins all elements in list into 1 element
-    file = [''.join(file)]
-
-#Iterates through every letter and finds [ or ]. No indexing however
-    for letter in file:
-        for char in letter:
-            if char == "[":
-                print("Here is a [")
-                #print(file.index(char))
-                
-            elif char == "]]":
-                print("Here is a ]")
-                #print(file.index(char))
-                
-            else:
-                print("0")
-
-    print(file)
-
-
-#readFile("dataDump.txt")'
->>>>>>> 22198c0133cc2339e65e4fe7a367d78bece667b2
-
