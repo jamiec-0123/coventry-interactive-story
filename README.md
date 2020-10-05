@@ -1,3 +1,4 @@
 # coventry-interactive-story
 
-***Only readTextFile.py is complete and working***
+***Only readTextFile.py and checkInput.py are working***
+
