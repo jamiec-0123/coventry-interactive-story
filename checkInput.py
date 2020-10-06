@@ -2,7 +2,7 @@ def checkInput(input, choices):
     option=0
     limmit = 0
     try:
-        """Ensures that the input is an interger"""
+        """Ensures that the input is an integer"""
         option =int(input)
         limmit = int(choices)
         if(type(option) != type(input) or type(limmit) != type(choices)):
