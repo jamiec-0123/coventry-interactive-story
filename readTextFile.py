@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import re
 
 def choiceSelector(selection):
@@ -58,5 +58,7 @@ def choiceSelectorAndNum(selection,lineNum):
 
 
 #Note, choices are case sensitive.
-print(choiceSelectorAndNum("next", 56))
+print(choiceSelectorAndNum("next", 57))
+print("/n")
+print(lineReader(48))
 #output eg. ['Sunny', 'Vincent was sunbathing inside the local park as Jules pumped into him', 'excited about a new idea that he’s determined to share Vincent with. [[next]]', 'next', 52]
