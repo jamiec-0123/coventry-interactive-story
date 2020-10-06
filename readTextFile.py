@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> badc4056c93e7b56cbc555c9ec39f6391f9eadb7
 import re
 
 def choiceSelector(selection):
