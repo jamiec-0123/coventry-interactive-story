@@ -31,7 +31,7 @@ def lineReader(lineNum):
                 test="{}".format(line.strip())
                 option=re.findall(r"\[\[(.*?)\]\]", test)
                 if(option!=[]):
-                    output.append(test)
+                    output.append(test.replace('[','').replace(']','').replace('"',''))
                     output += option
                     output.append(cnt)
                     return output
@@ -55,8 +55,6 @@ def choiceSelectorAndNum(selection,lineNum):
             line = fp.readline()
             cnt += 1
 
-def niceOutput(output):
-    return str(output).replace('[','').replace(']','').replace('"','')
 
 #Note, choices are case sensitive.
 #print(choiceSelectorAndNum("next", 57))
