@@ -1,9 +1,4 @@
-# coventry-interactive-story
-
-***Only readTextFile.py and checkInput.py are working***,
-***Read-Only Use***
-
-# The Fly on Doritos
+# The Fly on Doritos (coventry-interactive-story)
 
 The Fly on Doritos is an interactive story where you choose your own path. Coded in **Python** with **Tkinter**
 
