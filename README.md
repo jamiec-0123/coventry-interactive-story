@@ -5,7 +5,7 @@
 
 # The Fly on Doritos
 
-The Fly on Doritos is an interactive story where you choose your own path. Coded in Python with Tkinter
+The Fly on Doritos is an interactive story where you choose your own path. Coded in **Python** with **Tkinter**
 
 ## Installation
 
