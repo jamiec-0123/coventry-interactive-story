@@ -33,9 +33,6 @@ while True:
                 data=findChoice(number-1)
             else:
                 number= input(choice)
-        
-
-
     elif(userChoice =="start"):
         lineNum=0
     else:
