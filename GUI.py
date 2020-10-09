@@ -2,6 +2,12 @@ from tkinter import *
 
 root = Tk()
 mainColour = "white"
+# BUTTON FUNCTIONS
+def choice():
+    line.config(text="new text")
+    b1button.config(text="new choice1")
+    b2button.config(text="new choice2")
+    b3button.config(text="new choice3")
 
 # FUNCTIONS THAT CHANGES APP TO DARK/LIGHT
 def lightMode():
@@ -44,7 +50,7 @@ frame = Frame(root)
 frame.pack()
 
 #BUTTONS
-b1button = Button(frame, text = "Choice 1",height = 3, width = 10, bg = mainColour,activebackground="white")
+b1button = Button(frame, text = "Choice 1",height = 3, width = 10, bg = mainColour,activebackground="white", command = choice)
 b1button.pack(side = LEFT)
 b2button = Button(frame, text ="Choice 2",height = 3, width = 10, bg = mainColour,activebackground="white")
 b2button.pack(side = LEFT)
