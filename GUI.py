@@ -1,4 +1,5 @@
 from tkinter import *
+import sys
 
 root = Tk()
 mainColour = "white"
@@ -8,8 +9,10 @@ def choice():
     b1button.config(text="new choice1")
     b2button.config(text="new choice2")
     b3button.config(text="new choice3")
-    b4button = Button(frame, text = "return",height = 3, width = 10, bg = mainColour,activebackground="white")
-    b4button.pack(side = LEFT)
+    b4button.config(text="return", command = choice)
+
+def exit1():
+    root.destroy()
 
 # FUNCTIONS THAT CHANGES APP TO DARK/LIGHT
 def lightMode():
@@ -58,6 +61,8 @@ b2button = Button(frame, text ="Dominoes",height = 3, width = 10, bg = mainColou
 b2button.pack(side = LEFT)
 b3button = Button(frame, text="B&M",height = 3, width = 10, bg = mainColour,activebackground="white",command = choice)
 b3button.pack(side = LEFT)
+b4button = Button(frame, text = "exit",height = 3, width = 10, bg = mainColour,activebackground="white", command = exit1)
+b4button.pack(side = LEFT)
 
 root.config(menu=menubar)
 root.mainloop()
