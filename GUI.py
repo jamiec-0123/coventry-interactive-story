@@ -1,8 +1,11 @@
 from tkinter import *
 import sys
+from tkinter import messagebox
 
 root = Tk()
 mainColour = "white"
+def authorsCredits(): # Don't ask why
+    messagebox.showinfo(" ","Benjamin Sabatier, Dovydas Rickus, Benjamin Deery, Jamie Curran, Florian Kienhoefer")
 # BUTTON FUNCTIONS
 def choice():
     line.config(text="new text")
@@ -32,12 +35,17 @@ def darkMode():
     appName.config(bg="#2B2B2B",fg = "white")
     menubar.config(activebackground="#2B2B2B", fg = "white")
 
-# DARK/LIGHT MENU
+# TOP MENU
 menubar = Menu(root)
 dlmenu = Menu(menubar, tearoff=0)
 dlmenu.add_command(label="DARK MODE", command = darkMode)
 dlmenu.add_command(label="LIGHT MODE", command = lightMode)
 menubar.add_cascade(label="UI MODE", menu=dlmenu)
+authorsmenu = Menu(menubar, tearoff=0)
+authorsmenu.add_command(label="Credits", command = authorsCredits)
+menubar.add_cascade(label="Authors", menu=authorsmenu)
+
+#
 
 
 
