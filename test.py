@@ -31,7 +31,7 @@ i = 1
 while i < dataDumbLinesCount:
     data=readTextFile.lineReader(i)
     lineNumberOfFile=data[len(data)-1]
-    print("Testing:"+str(lineNumberOfFile)+" against"+str(i))
+    print("Testing:"+str(lineNumberOfFile)+" against:"+str(i))
     if testLineOutput(i) == readTextFile.lineReader(i):
         print("Line " + str(i) + " is identical, FAIL")
         i+=1
