@@ -24,7 +24,6 @@ def testLineOutput(line_number):
         for line in filehandle:
             if current_line == line_number:
                 return(line)
-                break
             current_line += 1
 
 # function to compare the the return from the functions "testLineOutput" and "readTextFile.lineReader"
