@@ -29,9 +29,12 @@ def testLineOutput(line_number):
 # function to compare the the return from the functions "testLineOutput" and "readTextFile.lineReader"
 i = 1
 while i < dataDumbLinesCount:
+    data=readTextFile.lineReader(i)
+    lineNumberOfFile=data[len(data)-1]
+    print("Testing:"+str(lineNumberOfFile)+" against"+str(i))
     if testLineOutput(i) == readTextFile.lineReader(i):
-        print("Line " + str(i) + " is identical")
+        print("Line " + str(i) + " is identical, FAIL")
         i+=1
     else:
-        print("Line " + str(i) + " is not identical")
+        print("Line " + str(i) + " is not identical, PASS")
         i+=1
