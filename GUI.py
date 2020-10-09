@@ -23,10 +23,11 @@ def darkMode():
 
 # DARK/LIGHT MENU
 menubar = Menu(root)
-helpmenu = Menu(menubar, tearoff=0)
-helpmenu.add_command(label="DARK MODE", command = darkMode)
-helpmenu.add_command(label="LIGHT MODE", command = lightMode)
-menubar.add_cascade(label="UI MODE", menu=helpmenu)
+dlmenu = Menu(menubar, tearoff=0)
+dlmenu.add_command(label="DARK MODE", command = darkMode)
+dlmenu.add_command(label="LIGHT MODE", command = lightMode)
+menubar.add_cascade(label="UI MODE", menu=dlmenu)
+
 
 
 #MAIN APP SETTINGS
