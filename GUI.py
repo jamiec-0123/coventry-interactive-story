@@ -44,12 +44,12 @@ root.title("INTERACTIVE STORY")
 root.config(bg = "white")
 
 #TEXT
-frame = Frame(root)
-frame.pack()
 appName = Label(root, text ='FLY ON DORITOS', font = "20", bg = mainColour)
 appName.pack()
 line = Message(root, text="His fingers were aching terribly from all those online job applications he has been filling out non-stop for the past 3 hours. Even though it was the year 2077, jobs were scarce. Vincent's dull eyes popped open when he saw a job interview invitation from Doritos, Dominoes, B&M on his email.",width = 800, font = "20", bg = mainColour)
 line.pack()
+frame = Frame(root)
+frame.pack()
 
 #BUTTONS
 b1button = Button(frame, text = "Doritos",height = 3, width = 10, bg = mainColour,activebackground="white", command = choice)
