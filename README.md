@@ -4,7 +4,7 @@ The Fly on Doritos is an interactive story where you choose your own path. Coded
 
 ## Installation and Execution
 
-Clone the repository and run **"cliMain".py** for terminal run or **"GUI.py"** for GUI execution
+Clone the repository and run **"cliMain".py** for terminal execution or **"GUI.py"** for GUI execution
 
 **GitHub CLI**
 ```bash
