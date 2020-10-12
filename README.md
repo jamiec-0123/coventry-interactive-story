@@ -15,7 +15,7 @@ or
 **Git Bash**
 ```bash
 git clone https://github.com/jamiec-0123/coventry-interactive-story
-
+```
 or
 
 Download zip and extract
